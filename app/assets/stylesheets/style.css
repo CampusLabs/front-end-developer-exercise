@@ -1,0 +1,227 @@
+body{
+	min-height:100%;
+	width:100%;
+	background:#bbbfc2;
+	margin:0;
+}
+h1{
+	font-family: 'Open Sans', sans-serif;
+}
+h2, h3, h4{
+	font-family: 'Source Sans Pro', sans-serif;
+}
+p{
+	font-family:Helvetica;
+	font-size:13px;
+	color:#65686f;
+	line-height:18px;
+}
+a{
+	font-family:Helvetica;
+	font-size:13px;
+	color:#6fbee7;
+	text-decoration:none;
+}
+ul{
+	margin:0;
+	padding:0;
+}
+.table{display:table;}
+.table-cell{
+	display:table-cell;
+	vertical-align:top;
+}
+#page{
+	width:980px;
+	height:100%;
+	margin:0 auto 20px;
+	position:relative;
+}
+#page::before{
+	content: "";
+	background:url('../images/shadow_left.jpg') no-repeat right top;
+	width:15px;
+	height:724px;
+	position:absolute;
+	left:-15px;
+	top:0;
+}
+#page::after{
+	content: "";
+	background:url('../images/shadow_right.jpg') no-repeat left top;
+	width:15px;
+	height:724px;
+	position:absolute;
+	right:-15px;
+	top:0;
+}
+#bottom-shadow{
+	height:30px;
+	width:100%;
+	background:url('../images/shadow_bottom.jpg')no-repeat center bottom;
+	position:absolute;
+	bottom:-30px;
+}
+header{
+	width:100%;
+	height:276px;
+	background:#fff url('../images/header.jpg') no-repeat center top;
+	background-position:top center;
+	padding-bottom:60px;
+	position:relative;
+}
+header h1{
+	color:#fff;
+	text-align:right;
+	display:inline-block;
+	position:absolute;
+	top:50px;
+	right:70px;
+	margin:0;
+	font-weight:300;
+	font-size:32px;
+}
+header h1 strong{
+	font-weight:700;
+	font-size:50px;
+	line-height:48px;
+}
+.container{
+	width:100%;
+	background:#fff;
+	min-height:100%;
+}
+/*--------------------Baby Step Side Menu------------------*/
+#babyStep-menu{
+	width:30%;
+	position:relative;
+	background: url('../images/shadow_left_nav.jpg');
+	background-repeat: repeat-y;
+	background-size:294px;
+	padding-top:3px;
+}
+#babyStep-menu ul{position:relative;}
+li.stepSelect{
+	list-style-type:none;
+	line-height:59px;
+	width:100%;
+	font-size:18px;
+	color:#9ba0a4;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight:400;
+	text-align:center;
+	display:block;
+	position:relative;
+	z-index:5;
+	border-bottom:1px solid #fff;
+	cursor:pointer;
+}
+li.stepSelect.active{
+	font-weight:600;
+	color:#36abe1;
+}
+.stepSelect-bg{
+	width: 30px;
+	height: 25px;
+	display: inline-block;
+	background-image: url('../images/icons/sprites/icons_small.png');
+	position: absolute;
+	right: 24px;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+}
+#step1.stepSelect .stepSelect-bg{background-position:0 0;}
+#step2.stepSelect .stepSelect-bg{background-position:0 -25px;}
+#step3.stepSelect .stepSelect-bg{background-position:0 -50px;}
+#step4.stepSelect .stepSelect-bg{background-position:0 -75px;}
+#step5.stepSelect .stepSelect-bg{background-position:0 -100px;}
+#step6.stepSelect .stepSelect-bg{background-position:0 -125px;}
+#step7.stepSelect .stepSelect-bg{background-position:0 -150px;}
+#step1.stepSelect.active .stepSelect-bg{background-position:0 -175px;}
+#step2.stepSelect.active .stepSelect-bg{background-position:0 -200px;}
+#step3.stepSelect.active .stepSelect-bg{background-position:0 -225px;}
+#step4.stepSelect.active .stepSelect-bg{background-position:0 -250px;}
+#step5.stepSelect.active .stepSelect-bg{background-position:0 -275px;}
+#step6.stepSelect.active .stepSelect-bg{background-position:0 -300px;}
+#step7.stepSelect.active .stepSelect-bg{background-position:0 -325px;}
+
+#highlight{
+	position:absolute;
+	height:60px;
+	width:100%;
+	background:#fff;
+	z-index:1;
+	top:0;
+	list-style-type:none;
+	-webkit-transition: top .8s ease-in-out;
+	-moz-transition: top .8s ease-in-out;
+	-o-transition: top .8s ease-in-out;	
+	transition: top .8s ease-in-out;
+}
+/*----------------------Baby Step Details-----------------*/
+#babyStep-wrapper{
+	width:100%;
+	height:100%;
+}
+#viewportWrapper{
+	height:600px;
+	overflow:hidden;
+	width:100%;
+}
+#babyStep-viewport{
+	height:4200px;
+	top:0;
+	position:relative;
+	-webkit-transition: top .8s ease-in-out;
+	-moz-transition: top .8s ease-in-out;
+	-o-transition: top .8s ease-in-out;	
+	transition: top .8s ease-in-out;
+
+}
+.babyStep-icon{
+	display:inline-block;
+	width:77px;
+	height:65px;
+	background-image: url('../images/icons/sprites/icons_large.png');
+	background-repeat:no-repeat;
+}
+.babyStep-info:first-child .babyStep-icon{background-position:0 -455px;}
+.babyStep-info:nth-child(2) .babyStep-icon{background-position:0 -520px;}
+.babyStep-info:nth-child(3) .babyStep-icon{background-position:0 -585px;}
+.babyStep-info:nth-child(4) .babyStep-icon{background-position:0 -645px;}
+.babyStep-info:nth-child(5) .babyStep-icon{background-position:0 -713px;}
+.babyStep-info:nth-child(6) .babyStep-icon{background-image:url('../images/icons/individual/icons_large_bs6_blue.png');}
+.babyStep-info:nth-child(7) .babyStep-icon{background-position:0 -842px;}
+
+.babyStep-headings{
+	padding-left:20px;
+}
+.babyStep-headings h2{
+	padding-top:10px;
+	font-weight:600;	
+	font-size:30px;
+	line-height:20px;
+	color:#36abe1;
+}
+.babyStep-headings h3{
+	margin:5px 0 24px;
+	font-weight:300;
+	font-size:18px;
+	line-height:20px;
+	color:#5c6366;
+}
+.babyStep-info{
+	padding:0 70px;
+	height:600px;
+}
+.babyStep-info > p:first-of-type{
+	margin-top:0;
+}
+.babyStep-info h2{
+	margin:0;
+}
+.friendList p{
+	margin:40px 0;
+	font-weight:bold;
+}
